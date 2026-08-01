@@ -7,7 +7,7 @@ st.markdown("""
     .watermark {
         position: fixed;
         top: 50%;
-        left: 45%;
+        left: 47%;
         transform: translate(-50%, -50%) rotate(-25deg);
         font-size: 100px;
         color: rgba(255, 255, 255, 0.04);
