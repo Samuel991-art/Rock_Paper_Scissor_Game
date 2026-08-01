@@ -2,6 +2,28 @@ from numpy._core.multiarray import result_type
 import streamlit as st
 import random
 
+st.markdown("""
+     <style>
+    .watermark {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        font-size: 8em;
+        color: rgba(255, 255, 255, 0.04);
+        z-index: 0;
+        pointer-events: none;
+        user-select: none;
+        white-space: nowrap;
+        font-weight: bold;
+        font-family: Arial, sans-serif;
+    }
+    .stApp > header {
+        background: transparent;
+    }
+    </style>
+    <div class="watermark">Sammiii</div>
+""", unsafe_allow_html=True)    
 if 'user_score' not in st.session_state:
     st.session_state.user_score = 0
 if 'computer_score' not in st.session_state:
