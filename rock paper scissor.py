@@ -44,21 +44,23 @@ if user_choice:
     st.session_state.computer_score += 1
 
 st.divider()
-st.write(f"**Your Score:** {st.session_state.user_score}")
-st.write(f"**Computer Score:** {st.session_state.computer_score}")
-st.write(f"**Tie Score:** {st.session_state.tie_score}")
+st.subheader("🏆 Scoreboard")
+score_col1, score_col2, score_col3 = st.columns(3)
+with score_col1:
+   st.metric(label="😎 You", value=st.session_state.user_score)
+with score_col2:
+   st.metric(label="🤖 Computer", value=st.session_state.computer_score)
+with score_col3:
+   st.metric(label="🤝 Tie", value=st.session_state.tie_score)
 
-if user_choice:
-    st.divider()
-    st.write(f"**You chose:** {user_choice}")
-    st.write(f"**Computer chose:** {computer_choice}")
-    if result_type == "win":
-        st.success("You win! 🎉")
-        st.balloons()
-    elif result_type == "tie":
-        st.info("It's a tie! 😁")
-    else:
-       st.info("Computer wins! 😉")
+st.divider()
+st.subheader("📊 Game Statistics")
+if st.session_state.user_score > st.session_state.computer_score:
+    st.success("You are leading! 🏆")
+elif st.session_state.user_score < st.session_state.computer_score:
+   st.warning("Computer is leading! catch up! 🤖")
+else:
+    st.info("It's a neck-to-neck game! Both are Equal! ⚖️")
 
 st.write("")
 if st.button("Reset Scores 🔄️"):
@@ -66,4 +68,3 @@ if st.button("Reset Scores 🔄️"):
     st.session_state.computer_score = 0
     st.session_state.tie_score = 0
     st.success("Scores have been reset! ✅")
-    
