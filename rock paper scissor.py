@@ -59,7 +59,7 @@ if user_choice:
     st.session_state.tie_score += 1
   elif (user_choice == "rock" and computer_choice == "scissors") or (user_choice == "paper" and computer_choice == "rock") or (user_choice == "scissors" and computer_choice == "paper"):
     st.success("You win! 🎉")
-    st.image("https://media.giphy.com/media/26t0Z42Mg6pbTUPHW/giphy.gif")
+    st.balloons()
     st.session_state.user_score += 1
   else:
     st.error("computer wins! 😉")
