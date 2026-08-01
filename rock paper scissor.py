@@ -15,13 +15,14 @@ st.markdown("""
         pointer-events: none;
         user-select: none;
         white-space: nowrap;
+        font-weight: bold;
         font-family: 'Brush Script MT', cursive;
     }
     .stApp > header {
         background: transparent;
     }
     </style>
-    <div class="watermark">Created by Sammiii</div>
+    <div class="watermark">Created by Samiii 🫠 </div>
 """, unsafe_allow_html=True)    
 if 'user_score' not in st.session_state:
     st.session_state.user_score = 0
