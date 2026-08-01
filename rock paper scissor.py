@@ -9,13 +9,12 @@ st.markdown("""
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%) rotate(-25deg);
-        font-size: 8em;
+        font-size: 100px;
         color: rgba(255, 255, 255, 0.04);
         z-index: 0;
         pointer-events: none;
         user-select: none;
         white-space: nowrap;
-        font-weight: bold;
         font-family: 'Brush Script MT', cursive;
     }
     .stApp > header {
