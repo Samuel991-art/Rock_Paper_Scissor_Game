@@ -9,7 +9,7 @@ st.markdown("""
         top: 50%;
         left: 47%;
         transform: translate(-50%, -50%) rotate(-25deg);
-        font-size: 100px;
+        font-size: 40px;
         color: rgba(255, 255, 255, 0.04);
         z-index: 0;
         pointer-events: none;
